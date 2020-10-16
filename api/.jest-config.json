@@ -1,0 +1,14 @@
+{
+  "moduleFileExtensions": ["ts", "tsx", "js"],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "tsconfig.json"
+    }
+  },
+  "testMatch": ["/**/*.spec.ts"],
+  "globalSetup": "./test_utils/setup_db.ts",
+  "setupFilesAfterEnv": ["./test_utils/db_env.ts"]
+}
