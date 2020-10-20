@@ -1,10 +1,7 @@
-// This file is executed once in the worker before executing each test file. We
-// wait for the database connection and make sure to close it afterwards.
-
 import { createConnection, getConnection } from "typeorm";
 import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConnectionOptions";
 
-beforeAll(async () => {
+export async function createTypeORMConnection() {
   const testOrmConfig: PostgresConnectionOptions = {
     type: "postgres",
     synchronize: true,
@@ -15,14 +12,14 @@ beforeAll(async () => {
     password: "postgres",
     database: "api_test",
     logging: false,
-    entities: ["src/entity/**/*.ts"],
-    migrations: ["src/migration/**/*.ts"],
-    subscribers: ["src/subscriber/**/*.ts"],
+    entities: ["build/api/src/entity/**/*.js"],
+    migrations: ["build/api/src/migration/**/*.js"],
+    subscribers: ["build/api/src/subscriber/**/*.js"],
   };
 
   await createConnection(testOrmConfig);
-});
+}
 
-afterAll(async () => {
+export async function closeTypeORMConnection() {
   await getConnection().close();
-});
+}

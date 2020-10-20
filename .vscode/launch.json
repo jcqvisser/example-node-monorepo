@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "API: Run Current Test File",
+      "cwd": "${workspaceFolder}/api",
+      "program": "node_modules/.bin/jasmine",
+      "args": ["--config=spec/config/jasmine.json", "build/${relativeFileDirname}/${fileBasenameNoExtension}.js"],
+      "outFiles": ["${workspaceFolder}/api/build/api/**/*.js"],
+      "sourceMaps": true,
+      "outputCapture": "std"
+    }
+  ]
+}

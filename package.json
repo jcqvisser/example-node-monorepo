@@ -1,0 +1,10 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "build-api": "lerna run --scope api build"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
