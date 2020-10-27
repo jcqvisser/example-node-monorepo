@@ -7,4 +7,7 @@ export class Book {
 
   @Column({ nullable: false })
   title: string;
+
+  @Column({ nullable: true })
+  author: string | null;
 }

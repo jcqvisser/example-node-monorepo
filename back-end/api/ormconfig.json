@@ -7,9 +7,9 @@
   "database": "api_development",
   "synchronize": true,
   "logging": false,
-  "entities": ["build/src/entity/**/*.js"],
-  "migrations": ["build/src/migration/**/*.js"],
-  "subscribers": ["build/src/subscriber/**/*.js"],
+  "entities": ["build/api/src/entity/**/*.js"],
+  "migrations": ["build/api/src/migration/**/*.js"],
+  "subscribers": ["build/api/src/subscriber/**/*.js"],
   "cli": {
     "entitiesDir": "src/entity",
     "migrationsDir": "src/migration",

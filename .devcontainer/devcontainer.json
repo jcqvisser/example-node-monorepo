@@ -22,11 +22,7 @@
   },
 
   // Add the IDs of extensions you want installed when the container is created.
-  "extensions": [
-    "dbaeumer.vscode-eslint",
-    "mtxr.sqltools",
-    "mtxr.sqltools-driver-pg"
-  ]
+  "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [3000, 5432],

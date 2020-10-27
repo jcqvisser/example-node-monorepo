@@ -2,9 +2,15 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build-api": "lerna run --scope api build"
+    "build-api": "lerna run --scope api build",
+    "start-api": "lerna run --scope api watch",
+    "build-front-end": "lerna run --scope front-end build",
+    "start-front-end": "lerna run --scope front-end start"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "@angular/cli": "^10.1.7"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "jcq-ecs-test-1",
+      "image": "649526152659.dkr.ecr.us-east-2.amazonaws.com/jcq-ecs-test-1:latest",
+      "portMappings": []
+    }
+  ]
+}

@@ -6,6 +6,7 @@
       "request": "launch",
       "name": "API: Run Current Test File",
       "cwd": "${workspaceFolder}/api",
+      "preLaunchTask": "npm: build-api",
       "program": "node_modules/.bin/jasmine",
       "args": ["--config=spec/config/jasmine.json", "build/${relativeFileDirname}/${fileBasenameNoExtension}.js"],
       "outFiles": ["${workspaceFolder}/api/build/api/**/*.js"],
